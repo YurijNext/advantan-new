@@ -1,0 +1,23 @@
+.container {
+  max-width: vie(1150, xl);
+  width: 100%;
+  @include mx--auto;
+  @include media(xl) {
+    max-width: none;
+    padding: 0 65px;
+  }
+  @include media(md) {
+    margin: 0 9%;
+    padding: 0;
+    width: auto;
+  }
+  @include media(sm) {
+    margin: 0 vie(25, sm);
+    padding: 0;
+    width: auto;
+  }
+
+  @include media(xs) {
+   margin: 0 vie(25, xs);
+  }
+}

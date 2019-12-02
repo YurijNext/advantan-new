@@ -1,0 +1,141 @@
+.mobile-menu {
+  height: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #1857a0;
+  padding: vie(30, xs) vie(35, xs) 0 vie(22, xs);
+  opacity: 0;
+  transition: all .3s ease-in-out;
+
+  @include media(sm) {
+    width: vie(250, sm);
+  }
+
+  @include media(xs) {
+    width: vie(180, xs);
+  }
+
+  &__list {
+    border-bottom: 1px solid #5396e4;
+  }
+
+  &__item {
+    @include media(sm) {
+      margin-bottom: vie(22, sm);
+    }
+    @include media(xs) {
+      margin-bottom: vie(22, xs);
+    }
+
+  }
+
+  &__link {
+    font-family: $gsb;
+    color: #fff;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    opacity: 1;
+    @include trs();
+
+    @include media(sm) {
+      font-size: vie(25, sm);
+      padding-left: vie(22, sm);
+    }
+
+    @include media(xs) {
+      font-size: vie(22, xs);
+      padding-left: vie(18, xs);
+    }
+
+
+
+    &:before {
+      @include pseudo();
+      left: 0;
+      width: vie(8, xs);
+      height: vie(8, xs);
+      background-color: #53d4f2;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__socials-text {
+    display: block;
+    color: #fff;
+
+    @include media(sm) {
+      margin-bottom: vie(20, sm);
+      margin-top: vie(20, sm);
+      font-size: vie(16, sm);
+    }
+
+    @include media(xs) {
+      margin-bottom: vie(20, xs);
+      margin-top: vie(20, xs);
+      font-size: vie(16, xs);
+    }
+  }
+
+  &__socials-list {
+    display: flex;
+  }
+
+  &__socials-item {
+    @include media(sm) {
+      margin-right: vie(30, sm);
+    }
+
+    @include media(xs) {
+      margin-right: vie(30, xs);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__socials-link {
+    display: block;
+
+    @include media(sm) {
+      width: vie(25, sm);
+      height: vie(25, sm);
+    }
+
+    @include media(xs) {
+      width: vie(25, xs);
+      height: vie(25, xs);
+    }
+  }
+
+  &__socilas-svg {
+    width: 100% !important;
+    width: 100%;
+  }
+}
+
+.mobile-menu--active {
+  visibility: visible;
+  opacity: 1;
+  transition: all .3s ease-in-out;
+
+  @include media(sm) {
+    height: vie(600, sm);
+  }
+  @include media(xs) {
+    height: vie(400, xs);
+  }
+}
+
+.mobile-menu__socials {
+  display: none;
+
+}

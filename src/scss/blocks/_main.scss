@@ -1,0 +1,258 @@
+.b-main {
+  background-image: url("../img/bg-photo.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left top;
+  padding-bottom: vie(30, xl);
+
+  @include media(sm) {
+    padding-top: vie(170, sm);
+    background-size: 110vw vie(300, sm) ;
+  }
+
+  @include media(xs) {
+    padding-top: vie(170, xs);
+    background-size: 170vw vie(300, xs) ;
+  }
+
+  &__container {
+    @include media(sm) {
+      display: flex;
+      flex-direction: column;
+    }
+    @include media(xs) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__icon {
+    width: vie(74, xl);
+    @include media(sm) {
+      width: vie(90, sm);
+    }
+    @include media(xs) {
+      width: vie(58, xs);
+    }
+  }
+
+  &__product-wrap {
+    padding-top: vie(40, xl);
+    width: vie(400, xl);
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    @include media(sm) {
+      order: 2;
+      width: 100%;
+    }
+    @include media(xs) {
+      order: 2;
+      width: 100%;
+    }
+
+  }
+
+  &__product-list {
+    display: flex;
+    margin-bottom: vie(69, xl);
+    justify-content: space-between;
+    @include media(sm) {
+      order: 2;
+    }
+    @include media(xs) {
+      order: 2;
+    }
+
+  }
+
+  &__product-item {
+    width: vie(100, xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include media(sm) {
+      width: vie(200, sm);
+    }
+    @include media(xs) {
+      width: vie(90, xs);
+    }
+
+  }
+
+  &__product-features {
+    margin-top: 2px;
+    white-space: wrap;
+    font-family: $geb;
+    font-size: vie(18, xl);
+    color: $accent;
+    @include media(sm) {
+      font-size: vie(20, sm);
+      line-height: vie(18, sm);
+    }
+    @include media(xs) {
+      font-size: vie(16, xs);
+      line-height: vie(14, xs);
+    }
+
+  }
+
+  &__product-photo-wrap {
+    width: 100%;
+    text-align: right;
+    @include media(sm) {
+      order: 1;
+      width: 82vw;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: vie(22, sm);
+
+      img {
+        margin-left: 20px;
+      }
+    }
+    @include media(xs) {
+      order: 1;
+      width: 82vw;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: vie(22, xs);
+
+    }
+
+
+
+
+  }
+
+  &__product-photo {
+    object-fit: contain;
+  }
+
+  &__product-title {
+    font-size: vie(13, xl);
+    color: $blueLight;
+    @include media(sm) {
+      font-size: vie(11, sm);
+    }
+    @include media(xs) {
+      font-size: vie(11, xs);
+    }
+
+  }
+
+  &__text-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: vie(55, xl);
+    @include media(sm) {
+      order: 1;
+
+    }
+    @include media(xs) {
+      order: 1;
+
+    }
+
+  }
+
+  &__link-wrap {
+    display: flex;
+    align-items: center;
+    max-width: vie(340, xl);
+    @include media(sm) {
+      display: none;
+    }
+    @include media(xs) {
+      display: none;
+    }
+
+  }
+
+  &__link {
+    display: block;
+    font-family: $gsb;
+    font-size: vie(24, xl);
+    color: $blueBolder;
+    text-decoration: underline;
+    margin-left: vie(27, xl);
+  }
+
+  &__fact {
+    max-width: vie(695, xl);
+    margin-left: auto;
+    margin-right: vie(35, xl);
+    @include media(sm) {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    @include media(xs) {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+  }
+
+  &__fact-title {
+    font-family: $gb;
+    font-size: vie(32, xl);
+    line-height: vie(36, xl);
+    margin-bottom: vie(20, xl);
+    color: $blueBolder;
+
+    @include media(sm) {
+      font-size: vie(25, sm);
+      line-height: vie(28, sm);
+    }
+    @include media(xs) {
+      font-size: vie(25, xs);
+      line-height: vie(28, xs);
+    }
+
+  }
+
+  &__fact-descr {
+    font-family: $gsb;
+    font-size: vie(18, xl);
+    color: $blueBolder;
+    font-weight: 400;
+    @include media(sm) {
+      font-size: vie(14, sm);
+      line-height: vie(17, sm);
+
+    }
+    @include media(xs) {
+      font-size: vie(14, xs);
+      line-height: vie(17, xs);
+
+    }
+
+  }
+
+  &__play-button {
+    order: 3;
+    width: 100%;
+    display: flex;
+    padding: vie(9, xs) vie(40, xs);
+    background-color: #1c61a7;
+    border-radius: 3px;
+    color: #fff;
+    text-align: left;
+
+    @include media(sm, min) {
+      display: none;
+    }
+  }
+
+  &__play-button-icon {
+    width: vie(50, xs);
+  }
+
+  &__play-button-link {
+    color: #fff;
+    font-size: vie(16, xs);
+    margin-top: vie(5, xs);
+  }
+}

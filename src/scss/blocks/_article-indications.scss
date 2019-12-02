@@ -1,0 +1,176 @@
+.article-indications {
+  background-image: url('../img/baby-hand-bg.jpg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: vie(49, xl);
+  padding-bottom: vie(56, xl);
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: vie(5, xl);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.37);
+  }
+
+  .article-treatment__text-list {
+    margin-top: vie(18, xl);
+  }
+
+  .article-treatment__text-item  {
+    color: #fff;
+    margin-bottom: vie(18, xl);
+  }
+
+  &__column {
+    width: 50%;
+
+    &:first-child {
+      margin-right: vie(80, xl);
+    }
+  }
+
+  &__descr {
+    font-size: vie(20, xl);
+    color: #fff;
+    font-family: $mainFont;
+    max-widows: vie(571, xl);
+    margin-bottom: vie(18, xl);
+  }
+
+  &__bottom {
+    padding-top: vie(46, xl);
+    padding-bottom: vie(56, xl);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .remember-wrapper {
+    padding: vie(30, xl) vie(57, xl);
+    border: vie(2, xl) solid #fff;
+  }
+
+  &__remember {
+    font-size: vie(18, xl);
+    color: #fff;
+    font-family: $gsb;
+  }
+
+  &__author {
+    font-size: vie(16, xl);
+    color: #fff;
+  }
+
+  &__contacts {
+    font-size:vie(12, xl);
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: vie(15, xl);
+  }
+}
+
+.article-indications__row {
+  @include media(sm) {
+    flex-direction: column;
+    border-bottom: none;
+  }
+  @include media(xs) {
+    flex-direction: column;
+    border-bottom: none;
+  }
+}
+
+.article-indications__column {
+  @include media(sm) {
+    width: 100%;
+  }
+  @include media(xs) {
+    width: 100%;
+  }
+}
+
+.article-indications__descr {
+  @include media(sm) {
+    font-size: vie(14, sm);
+  }
+  @include media(xs) {
+    font-size: vie(14, xs);
+  }
+}
+.article-indications {
+  @include media(sm) {
+    padding-top: vie(50, sm);
+  }
+  @include media(xs) {
+    padding-top: vie(50, xs);
+  }
+}
+
+.article-indications__bottom {
+  @include media(sm) {
+    display: flex;
+    flex-direction: column;
+  }
+  @include media(xs) {
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.article-indications__remember {
+  @include media(sm) {
+    font-size: vie(16, sm);
+    text-align: center;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  @include media(xs) {
+    font-size: vie(16, xs);
+    text-align: center;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.article-indications .remember-wrapper {
+
+  @include media(sm) {
+    border: vie(4, sm) solid #ffffff;
+    padding: vie(25, sm);
+    margin-bottom: vie(20, sm);
+  }
+  @include media(xs) {
+    border: vie(4, xs) solid #ffffff;
+    padding: vie(25, xs);
+    margin-bottom: vie(20, xs);
+  }
+}
+
+.article-indications__author {
+  @include media(sm) {
+    font-size: vie(14, sm);
+  }
+  @include media(xs) {
+    font-size: vie(14, xs);
+  }
+}
+
+.article-indications__contacts {
+  @include media(sm) {
+    font-size: vie(11, sm);
+    margin: vie(4, sm) 0;
+  }
+  @include media(xs) {
+    font-size: vie(11, xs);
+    margin: vie(4, xs) 0;
+  }
+}
+
+.mobile-menu {
+  z-index: 3;
+}
+
+
+

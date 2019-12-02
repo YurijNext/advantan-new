@@ -1,0 +1,12 @@
+// - Icons
+mixin icon(type,name)
+    if type == 'fab'
+        i.fab.fa-#{name}
+    if type == 'far'
+        i.far.fa-#{name}
+    if type == 'fas'
+        i.far.fa-#{name}
+// - Buttons
+mixin button(size, color, text, customClass)
+    button.b-button.b-button--#{size}.b-button--#{color}(class=`${customClass})
+        span.b-button__content= text

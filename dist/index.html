@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Template</title>
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:url" content="http://dermatit.little9485.tmweb.ru">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Advantan">
+  <meta property="og:description" content="Вы прошли тест на сайте Advantan">
+  <meta property="og:image" content="http://dermatit.little9485.tmweb.ru/img/result1.jpg">
+  <!-- Include FontAwesome 5-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+  <!-- Main Style-->
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+  <div class="video-popup">
+    <div class="overlay"></div>
+    <div class="video-popup__substrate">
+      <div class="video-popup__video-wrap">
+        <button class="video-popup__close popup-close" type="button">Закрыть</button>
+        <iframe class="video-popup__video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="test-popup" id="test">
+    <div class="overlay"></div>
+    <div class="test-popup__wrap">
+      <button class="test-popup__close popup-close" type="button">Закрыть</button>
+      <header class="test-popup__header">
+        <ul class="test-popup__dots js-dots-list"></ul>
+        <div class="question-container">
+          <div class="test-popup__qustion js-q-wrap"></div>
+        </div>
+      </header>
+      <div class="test-popup__content">
+        <div class="test-popup__image-wrap js-cnt-wrap"></div>
+        <div class="test-popup__buttons">
+          <button class="test-popup__button js-ans-btn" type="button" data-status="false"><span class="test-popup__button-content">Ложь</span></button>
+          <button class="test-popup__button js-ans-btn" type="button" data-status="true"><span class="test-popup__button-content">Правда</span></button>
+        </div>
+        <div class="test-popup__btn-wrap">
+          <button class="test-popup__reply" type="button"><span class="test-popup__reply-content">Ответить</span></button>
+          <button class="test-popup__continue" type="button"><span class="test-popup__reply-content">Дальше</span></button>
+        </div>
+        <div class="test-socials"><span>Поделиться с друзьями</span>
+          <ul class="test-socials-list">
+            <li class="test-socials-item"><a class="test-socials-link" href="#" id="share-fb"><img src="img/test/insta.png" alt="Icon"></a></li>
+            <li class="test-socials-item"><a class="test-socials-link" href="#" id="share-vk"><img src="img/test/vk.png" alt="Icon"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header class="b-header" id="header">
+    <div class="container">
+      <div class="b-header__wrap">
+        <div class="b-header__logo"><a class="b-header__logo-link" href="/"><img class="b-header__logo-img" src="img/advantanLogo.svg" alt="Logo"></a></div>
+        <nav class="b-header__nav">
+          <ul class="b-header__nav-list">
+            <li class="b-header__nav-item"><a class="b-header__nav-link b-header__nav-link--active" href="#brand">О бренде</a></li>
+            <li class="b-header__nav-item"><a class="b-header__nav-link" href="#video">Видео</a></li>
+            <li class="b-header__nav-item"><a class="b-header__nav-link" href="#test">Тест</a></li>
+            <li class="b-header__nav-item"><a class="b-header__nav-link" href="#posts">Статьи</a></li>
+          </ul>
+        </nav>
+        <div class="b-header__socials">
+          <ul class="b-header__socials-list">
+            <li class="b-header__socials-item"><a class="b-header__socilas-link" href="https://www.instagram.com/mustela_russia/" target="_blank">
+                <svg class="b-header__socilas-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 25 25">
+                  <g>
+                    <image width="25" height="25" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAADLUlEQVRIS6WWW6hVZRSFvyGVaFQqZhiFWCZpCiUhQfgSGhUheoQQRc1LqKQPQSUUaGRkFEEPEUKWmEWImkhakOiLvojRg1beyLS0K128lFDWiHH4lyy2a+88+sNmr732nHPM65i/aDm2ZwD3AyOAgUBf4EqgV6ss8C/wN/An8AtwAPgEeFfSP5W8qgfb44BVwPAGYz19dQR4TNKOKHaD2B4L7K5ZWgd8CvwA/FG8jdeudMp39K8q0Q4CxgDTa3bGSdol20lDjF0PfAs8JOnznrpey8hgYBdwC3AydgMyDXiv5PdWSUcvBcD2s8BgSYtsJ6rjpZbzArIBmAKsl/TIJQJMBDYX3U2Sumy/DcwGtgRkLzAaWCzp9SYQ2yOBOUCaI2lNJyUlqyXttX0X8FnRfUXS07Yj/xZwMCCpw03ANEnvN7T0EuClDhEuk/S87XuAGyV9UJppMpDn7wLyc5mHLkmb6sZsPwW8XN4dLrU7VjlVZil/L5W0vEX3AeDjRB2Q34HrgImSPqx1Sbrjq/K7sV623wEyvDkjJGUYu4/t8cA24FRA0mbXAg9L2loTSn0eB76WFMDGY3s/cHvyL2leTf8+YDtwOiCngGsaQL4AUvAnJb3aAWQh8EarM7YrkDOdQH4E0u+TJFXteQGW7QmFr04D/SSFGZKuiwL5shT2CUmvdYhkPrASOCppaEO6uiNpV5OkIKk4LKktadoOBd0BrJH0aDuQdt11G3CoKK2VNLNhht4EqmKPrnNea3d1mpPw0QvFeDxeC2RObi5se2f570VJkT1/bFdz8uvFTPwy4Ll2NQFWSHqmIcpJQIb7+4DsA0b9D3eFm+a2cNfOwl17mhywHfkswUMB2Qh0AeskTe3gcTXJvao27SRrezWQRvgoICnoGiA7eaikEOZlnbJPvgF6AwsCcgXwE9A/vQ48WOegnqLZHgaEntL2uWAMqHb8vWU/VDazKZPrasf/VfZ7dnw+OVnb0c9N5mrgBuDuQpjVBWW8pO3120pYM4Ua0lPvG+RPAPMrwj0PUvgmN49Z5d6VcAcAfYq3ka3LJ6Lw1DngLPBb2KHQe6Y/77rPf1Z9gCMIXOpbAAAAAElFTkSuQmCC"></image>
+                  </g>
+                </svg></a></li>
+            <li class="b-header__socials-item"><a class="b-header__socilas-link" href="https://vk.com/mustelarussia" target="_blank">
+                <svg class="b-header__socilas-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="19" viewbox="0 0 32 19">
+                  <g>
+                    <image width="32" height="19" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAATCAYAAADxlA/3AAACcElEQVRIS52WXYhNURTHf3/lo5SE0ki6YaQhMyVlfE9SEvOA5EVRSpnywOBFPvJmqKHIi6K8eJIoL9NgiJSE5EbmYXy9+Xggk2Rp3fa9nTmz9z232S/n3L3+67/+e+211rkys7vASkaul0CHpL/ZbTPrBfYC/wALNoX3y5KO5ngqP81sH3AamBSw7jMM7JSZVYnyvnskXc0JOAyciQUB3kpamLeZ2XjgT8Kn0wXcAHZEAE8lLY8QesY2RvAPJa2J4I8DpyL4D0DJBXQCtxIKS5KGclnYDNyO4Ackrc1h/fQ/gQkR/FZJN12Ag74DkyOg65J25UjbgccNCjgHHIxgn0la5vteDF4kZ4FDiSxMl/StajOzdcC9IgFmNhcYTHA2S3qfFdAEfEmAr0nanRHQAfQ3IMA7aUkE1yPpSHW/koGQhYvA/oSIFknlgEsJ6Je0viCjQ5JK2RhZAVOBr8C4iIiypJZA7kH6IphHklab2QHgfOIgrZJeRQUE8m6gJ+F8SVKXmc0CPkcwv8OdL074d0vyohyxahnIXMU7oDlBcgzwrjmRsNfb3iLpTiMCFgGvxxCgyOUXsErSi+QVZLJwcoynLBLhI7ld0vMqcNQVZEQ8AEaN1joRvIB96HgGa20WwbuIeZI+ua2egImAV+yComMFe5+kDaGYV4TxPiPh+9F5JQ0nBQSiKcAA0NqAiPuSfEZUlpnNBp4A/oytCr6ugEDkc+EKUJuGCcLKHMjazGwm8AaYlvDpKhSQOdH2UJipPh+UND8fyMy8pb2rYl/EdA2kUm5mm4BtwFLAvyE+F34AvZIuxPzMrA3wPzdzcvbyf0gp48BSvNegAAAAAElFTkSuQmCC"></image>
+                  </g>
+                </svg></a></li>
+          </ul>
+        </div>
+        <button class="hamburger b-header__humburger" type="button"><span class="hamburger-box b-header__humburger-box"><span class="hamburger-inner b-header__humburger-inner"></span></span></button>
+      </div>
+    </div>
+    <div class="b-header__right-bg"></div>
+    <nav class="mobile-menu">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a class="mobile-menu__link" href="#brand">О бренде</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__link" href="#video">Видео</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__link" href="#test">Тест</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__link" href="#posts">Статьи</a></li>
+      </ul>
+      <div class="mobile-menu__socials"><span class="mobile-menu__socials-text">Мы в соцсетях:</span>
+        <ul class="mobile-menu__socials-list">
+          <li class="mobile-menu__socials-item"><a class="mobile-menu__socials-link" href="#">
+              <svg class="b-header__socilas-svg mobile-menu__socilas-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 25 25">
+                <g>
+                  <image width="25" height="25" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAADLUlEQVRIS6WWW6hVZRSFvyGVaFQqZhiFWCZpCiUhQfgSGhUheoQQRc1LqKQPQSUUaGRkFEEPEUKWmEWImkhakOiLvojRg1beyLS0K128lFDWiHH4lyy2a+88+sNmr732nHPM65i/aDm2ZwD3AyOAgUBf4EqgV6ss8C/wN/An8AtwAPgEeFfSP5W8qgfb44BVwPAGYz19dQR4TNKOKHaD2B4L7K5ZWgd8CvwA/FG8jdeudMp39K8q0Q4CxgDTa3bGSdol20lDjF0PfAs8JOnznrpey8hgYBdwC3AydgMyDXiv5PdWSUcvBcD2s8BgSYtsJ6rjpZbzArIBmAKsl/TIJQJMBDYX3U2Sumy/DcwGtgRkLzAaWCzp9SYQ2yOBOUCaI2lNJyUlqyXttX0X8FnRfUXS07Yj/xZwMCCpw03ANEnvN7T0EuClDhEuk/S87XuAGyV9UJppMpDn7wLyc5mHLkmb6sZsPwW8XN4dLrU7VjlVZil/L5W0vEX3AeDjRB2Q34HrgImSPqx1Sbrjq/K7sV623wEyvDkjJGUYu4/t8cA24FRA0mbXAg9L2loTSn0eB76WFMDGY3s/cHvyL2leTf8+YDtwOiCngGsaQL4AUvAnJb3aAWQh8EarM7YrkDOdQH4E0u+TJFXteQGW7QmFr04D/SSFGZKuiwL5shT2CUmvdYhkPrASOCppaEO6uiNpV5OkIKk4LKktadoOBd0BrJH0aDuQdt11G3CoKK2VNLNhht4EqmKPrnNea3d1mpPw0QvFeDxeC2RObi5se2f570VJkT1/bFdz8uvFTPwy4Ll2NQFWSHqmIcpJQIb7+4DsA0b9D3eFm+a2cNfOwl17mhywHfkswUMB2Qh0AeskTe3gcTXJvao27SRrezWQRvgoICnoGiA7eaikEOZlnbJPvgF6AwsCcgXwE9A/vQ48WOegnqLZHgaEntL2uWAMqHb8vWU/VDazKZPrasf/VfZ7dnw+OVnb0c9N5mrgBuDuQpjVBWW8pO3120pYM4Ua0lPvG+RPAPMrwj0PUvgmN49Z5d6VcAcAfYq3ka3LJ6Lw1DngLPBb2KHQe6Y/77rPf1Z9gCMIXOpbAAAAAElFTkSuQmCC"></image>
+                </g>
+              </svg></a></li>
+          <li class="mobile-menu__socials-item"><a class="mobile-menu__socials-link" href="#">
+              <svg class="b-header__socilas-svg mobile-menu__socilas-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="19" viewbox="0 0 32 19">
+                <g>
+                  <image width="32" height="19" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAATCAYAAADxlA/3AAACcElEQVRIS52WXYhNURTHf3/lo5SE0ki6YaQhMyVlfE9SEvOA5EVRSpnywOBFPvJmqKHIi6K8eJIoL9NgiJSE5EbmYXy9+Xggk2Rp3fa9nTmz9z232S/n3L3+67/+e+211rkys7vASkaul0CHpL/ZbTPrBfYC/wALNoX3y5KO5ngqP81sH3AamBSw7jMM7JSZVYnyvnskXc0JOAyciQUB3kpamLeZ2XjgT8Kn0wXcAHZEAE8lLY8QesY2RvAPJa2J4I8DpyL4D0DJBXQCtxIKS5KGclnYDNyO4Ackrc1h/fQ/gQkR/FZJN12Ag74DkyOg65J25UjbgccNCjgHHIxgn0la5vteDF4kZ4FDiSxMl/StajOzdcC9IgFmNhcYTHA2S3qfFdAEfEmAr0nanRHQAfQ3IMA7aUkE1yPpSHW/koGQhYvA/oSIFknlgEsJ6Je0viCjQ5JK2RhZAVOBr8C4iIiypJZA7kH6IphHklab2QHgfOIgrZJeRQUE8m6gJ+F8SVKXmc0CPkcwv8OdL074d0vyohyxahnIXMU7oDlBcgzwrjmRsNfb3iLpTiMCFgGvxxCgyOUXsErSi+QVZLJwcoynLBLhI7ld0vMqcNQVZEQ8AEaN1joRvIB96HgGa20WwbuIeZI+ua2egImAV+yComMFe5+kDaGYV4TxPiPh+9F5JQ0nBQSiKcAA0NqAiPuSfEZUlpnNBp4A/oytCr6ugEDkc+EKUJuGCcLKHMjazGwm8AaYlvDpKhSQOdH2UJipPh+UND8fyMy8pb2rYl/EdA2kUm5mm4BtwFLAvyE+F34AvZIuxPzMrA3wPzdzcvbyf0gp48BSvNegAAAAAElFTkSuQmCC"></image>
+                </g>
+              </svg></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="b-main" id="brand">
+      <div class="container b-main__container">
+        <div class="b-main__product-wrap">
+          <ul class="b-main__product-list">
+            <li class="b-main__product-item"><img class="b-main__product-icon b-main__icon" src="img/icon-1.png" alt="Icon blob"><span class="b-main__product-features">Легкая <br> текстура</span></li>
+            <li class="b-main__product-item"><img class="b-main__product-icon b-main__icon" src="img/icon-2.png" alt="Icon clock"><span class="b-main__product-features">1 раз <br> в день</span></li>
+            <li class="b-main__product-item"><img class="b-main__product-icon b-main__icon" src="img/icon-3.png" alt="Icon bottle"><span class="b-main__product-features">Для детей <br> с 4 месяцев</span></li>
+          </ul>
+          <div class="b-main__product-photo-wrap"><img class="b-main__product-photo" src="img/salve.png" alt="Salve photo"><span class="b-main__product-title">Адвантан® П  N013563/01, П N013563/02</span></div>
+        </div>
+        <div class="b-main__text-wrap">
+          <div class="b-main__link-wrap"><img class="b-main__link-icon b-main__icon" src="img/play.png" alt="Play video icon"><a class="b-main__link show-video-popup" href="#" data-src="https://youtube.com/embed/yWQ-0ptRBG4">Смотреть видео <br> с Е. О. Комаровским</a></div>
+          <div class="b-main__fact">
+            <h2 class="b-main__fact-title">Атопический дерматит: лечится или нет?</h2>
+            <p class="b-main__fact-descr">Атопический дерматит - очень распространенное заболевание среди детей. Чтобы помочь справиться с неприятными симптомами, нужно знать о нем больше. О том, как это сделать, какие симптомы должны насторожить, - в нашем проекте.</p>
+          </div>
+        </div>
+        <div class="b-main__play-button"><img class="b-main__link-icon b-main__play-button-icon" src="img/play.png" alt="Play video icon"><a class="b-main__link b-main__play-button-link show-video-popup" href="#" data-src="https://youtube.com/embed/yWQ-0ptRBG4">Смотреть видео <br> с Е. О. Комаровским</a></div>
+      </div>
+    </section>
+    <section class="b-videos" id="video">
+      <div class="container">
+        <h2 class="b-videos__title">Видео с Е. О. Комаровским</h2>
+        <div class="b-videos__wrapper">
+          <div class="b-videos__video-wrap">
+            <div class="b-videos__poster b-videos__poster--big" data-src="https://youtube.com/embed/6V0SrIslOsE">
+              <div class="b-videos__poster-img-wrap"><img class="b-videos__poster-img" src="img/mainvideoPrview5.jpg" alt="Video poster"></div>
+              <h5 class="b-videos__descr b-videos__descr--big">Мазь, эмульсия и крем: в чем разница и кому что подходит?</h5>
+            </div>
+            <button class="b-videos__button b-button" type="button"><span class="b-videos__button-content b-button__content">Смотреть видео</span></button>
+          </div>
+          <div class="b-videos__group">
+            <div class="b-videos__poster-wrap">
+              <div class="b-videos__poster b-videos__poster--min" data-src="https://youtube.com/embed/Ilp-J1HdJnA">
+                <div class="b-videos__poster-img-wrap"><img class="b-videos__poster-img" src="img/mainvideoPrview4.jpg" alt="Video poster"></div>
+                <h5 class="b-videos__descr b-videos__descr--min">Безопасны ли наружные гормональные препараты?</h5>
+              </div>
+            </div>
+            <div class="b-videos__poster-wrap">
+              <div class="b-videos__poster b-videos__poster--min" data-src="https://youtube.com/embed/6V0SrIslOsE">
+                <div class="b-videos__poster-img-wrap"><img class="b-videos__poster-img" src="img/mainvideoPrview3.jpg" alt="Video poster"></div><span class="b-videos__descr b-videos__descr--min">Наружные гормональные препараты: что это такое и зачем они нужны?</span>
+              </div>
+            </div>
+            <div class="b-videos__poster-wrap">
+              <div class="b-videos__poster b-videos__poster--min" data-src="https://youtube.com/embed/yWQ-0ptRBG4">
+                <div class="b-videos__poster-img-wrap"><img class="b-videos__poster-img" src="img/mainvideoPrview2.jpg" alt="Video poster"></div><span class="b-videos__descr b-videos__descr--min">Атопический и аллергический дерматиты: чем лечить?</span>
+              </div>
+            </div>
+            <div class="b-videos__poster-wrap">
+              <div class="b-videos__poster b-videos__poster--min" data-src="https://youtube.com/embed/6V0SrIslOsE">
+                <div class="b-videos__poster-img-wrap"><img class="b-videos__poster-img" src="img/mainvideoPrview1.jpg" alt="Video poster"></div><span class="b-videos__descr b-videos__descr--min">Почему не надо бояться гормональных препаратов</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="b-test" id="test">
+      <div class="container">
+        <div class="b-test__content"><img class="b-test__icon b-main__icon" src="img/icon-4.png" alt="Check icon">
+          <h2 class="b-test__title">Где тут правда, а где - ложь?</h2>
+          <p class="b-test__descr">Найдите верное утверждение про атопический дерматит</p>
+          <button class="b-button__bigger b-test__button" type="button"><span class="b-button__bigger-content b-test__button-content">Пройти тест</span></button>
+        </div>
+      </div>
+    </section>
+    <section class="b-posts" id="posts">
+      <div class="container">
+        <div class="b-posts__title">Статьи</div>
+        <div class="b-posts__wrap">
+          <div class="b-posts__post-wrap">
+            <figure class="b-posts__article-preview"><a class="b-posts__link" href="#"><img class="b-posts__article-img" src="img/photo-1.jpg" alt="Post preview photo"></a><a class="b-posts__poster-link" href="#">
+                <figcaption class="b-posts__article-title">Зуд и дерматиты у детей</figcaption></a>
+              <div class="b-posts__btn-wrap">
+                <button class="b-button b-posts__button" type="button"><span class="b-button__content">Читать статью</span></button>
+              </div>
+            </figure>
+          </div>
+          <div class="b-posts__post-wrap">
+            <figure class="b-posts__article-preview"><a class="b-posts__link" href="#"><img class="b-posts__article-img" src="img/photo-2.jpg" alt="Post preview photo"></a><a class="b-posts__poster-link" href="#">
+                <figcaption class="b-posts__article-title">Как правильно выбирать средство для лечения атопического дерматита</figcaption></a>
+              <div class="b-posts__btn-wrap">
+                <button class="b-button b-posts__button" type="button"><span class="b-button__content">Читать статью</span></button>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="b-warning">
+      <div class="container">
+        <div class="b-warning__wrap"><img class="b-warning__image" src="img/w-bg.jpg" alt="Warning"></div>
+        <p class="b-warning__descr">Все претензии по содержанию данного промоционного материала, а также сообщения о нежелательныхявлениях направляются в ООО “ЛЕО Фармасьютикал Продактс” по адресу 125315 Россия, Москва, Ленинградский проспект 72, корпус 2 или по телефону +7 (495) 789 1160. <a href="http://komarovskiy.net/pages,agreement" class="privacy-policy">Политика конфиденциальности </a> МАТ-30065-11-19</p>
+      </div>
+    </section>
+  </main>
+  <footer class="b-footer" id="footer">
+    <div class="container">
+      <ul class="b-footer__nav">
+        <li class="b-footer__item"><a class="b-footer__link" href="http://komarovskiy.net/pages,sprosit-doktora">Консультации</a></li>
+        <li class="b-footer__item"><a class="b-footer__link" href="http://komarovskiy.net/pages,advertisements">Рекламодателям</a></li>
+        <li class="b-footer__item"><a class="b-footer__link" href="http://books.komarovskiy.net/mail">Книга-почтой</a></li>
+        <li class="b-footer__item"><a class="b-footer__link" href="http://komarovskiy.net/contact">Контакты</a></li>
+        <li class="b-footer__item"><a class="b-footer__link" href="http://komarovskiy.net/account/signin">Войти</a></li>
+      </ul>
+      <div class="b-footer__text">
+        <div class="b-footer__text-left">
+          <p class="b-footer__copyright">Евгений Олегович Комаровский 1993-2019</p><a class="b-footer__mail" href="mail: webmaster@komarovskiy.net">webmaster@komarovskiy.net</a>
+        </div>
+        <div class="b-footer__socials-wrap">
+          <p class="b-footer__socials-text">Мы в социальных сетях:</p>
+          <ul class="b-footer__socials">
+            <li class="b-footer__socials-item"><a class="b-footer__socials-link b-footer__k" href="http://klubkom.net/"></a></li>
+            <li class="b-footer__socials-item"><a class="b-footer__socials-link b-footer__vk" href="http://vk.com/eokomarovskiy"></a></li>
+            <li class="b-footer__socials-item"><a class="b-footer__socials-link b-footer__fs" href="http://www.facebook.com/komarovskiynet"></a></li>
+            <li class="b-footer__socials-item"><a class="b-footer__socials-link b-footer__yt" href="http://www.youtube.com/user/doctorkomarovskiy/"></a></li>
+            <li class="b-footer__socials-item"><a class="b-footer__socials-link b-footer__in" href="https://instagram.com/DOCTOR_KOMAROVSKIY/"></a></li>
+            <li class="b-footer__socials-item"><a class="b-footer__socials-link b-footer__t" href="https://t.me/dr_komarovskiy"></a></li>
+          </ul>
+        </div>
+        <div class="b-footer__text-right">
+          <p class="b-footer__descr">Использование любых материалов сайта допустимо только при соблюдении <a href="http://www.komarovskiy.net/pages,agreement" class="b-footer__privacy"> соглашения об использовании сайта</a> и с письменного разрешения <a href="mailto:klinikom@komarovskiy.net" class="b-footer__privacy"">Администрации</a></p>
+          <p class="b-footer__descr">Юридическу защиту обеспечивает Адвокатское бюро "Бурлаков и партнеры"</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="js/scripts.min.js"></script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&amp;version=v5.0"></script>

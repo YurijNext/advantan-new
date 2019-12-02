@@ -1,0 +1,37 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: $mainFont;
+  position: relative;
+}
+
+a {
+  @include trs(color);
+  color: inherit;
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+textarea {
+  resize: none;
+}

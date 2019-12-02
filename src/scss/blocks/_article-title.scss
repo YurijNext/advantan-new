@@ -1,0 +1,154 @@
+.article-2 {
+  position: relative;
+}
+
+.article-block {
+  height: vie(425, xl);
+}
+
+.article-block .container {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.article-block__photo {
+  width: 100%;
+}
+
+
+.article-block__left-col {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: vie(425, xl);
+}
+
+.article-block__right-col {
+  width: 50%;
+  margin-left: auto;
+  padding-left: vie(40, xl);
+  padding-top: vie(78, xl);
+}
+
+.article-block__link {
+  font-size: vie(16, xl);
+  font-family: $gsb;
+  color: #1b1b1b;
+  text-decoration: none;
+  border-bottom: vie(1, xl) solid #1b1b1b;
+  opacity: 1;
+  @include trs();
+  display: inline-block;
+  margin-bottom: vie(24, xl);
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.article-block__title {
+  color: #1b62a7;
+  font-family: $gsb;
+  margin-bottom: vie(22, xl);
+  font-size: vie(40, xl);
+}
+
+.article-block__descr {
+  font-size: vie(18, xl);
+  color: #303030;
+  font-family: $mainFont;
+}
+
+
+.article-block__left-col-bg:after {
+  conent: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/baby.jpg");
+}
+
+.article-block {
+  @include media(sm) {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.article-block__left-col {
+  @include media(sm) {
+    position: relative;
+    height: vie(360, sm);
+    width: 100%;
+    order: 1;
+  }
+
+  @include media(xs) {
+    position: relative;
+    width: 100%;
+    order: 1;
+  }
+}
+
+.article-block__right-col {
+  @include media(sm) {
+    width: auto !important;
+    margin-left: 0;
+    order: 0;
+    width: 100%;
+    margin: 0 9%;
+    padding-left: 0;
+    margin-bottom: vie(17, sm);
+  }
+  @include media(xs) {
+    width: auto !important;
+    margin-left: 0;
+    order: 0;
+    margin: 0 9%;
+    width: 100%;
+    margin-bottom: vie(17, xs);
+  }
+}
+
+.article-block__link {
+  @include media(sm) {
+    font-size: vie(16, sm);
+    margin-bottom: vie(21, sm);
+  }
+  @include media(xs) {
+    font-size: vie(16, xs);
+    margin-bottom: vie(15, xs);
+  }
+}
+
+.article-block__title {
+  @include media(sm) {
+    font-size: vie(25, sm);
+  }
+  @include media(xs) {
+    font-size: vie(25, xs);
+  }
+}
+
+
+.article-block__descr {
+  @include media(sm) {
+    font-size: vie(14, sm);
+  }
+  @include media(xs) {
+    font-size: vie(14, xs);
+  }
+}
+
+.article-block__photo {
+  @include media(xs) {
+    height: vie(240, xs);
+  }
+}
+
+

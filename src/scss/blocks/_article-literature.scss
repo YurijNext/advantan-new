@@ -1,0 +1,65 @@
+.article-literature {
+  padding-top: vie(28, xl);
+  padding-bottom: vie(18, xl);
+  border-bottom: vie(2, xl) solid #e4e4e4;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+    width: 50%;
+    &:first-child {
+      margin-right: vie(80, xl);
+    }
+  }
+
+  &__item {
+    margin-bottom: vie(12, xl);
+
+    p {
+      color: #323232;
+      font-size: vie(15, xl);
+      font-weight: 400;
+    }
+  }
+}
+
+.article-literature {
+  @include media(sm) {
+    padding: vie(30, sm) 0;
+  }
+  @include media(xs) {
+    padding: vie(30, xs) 0;
+  }
+}
+
+.article-literature__row {
+  @include media(sm) {
+    display: flex;
+    flex-direction: column;
+  }
+  @include media(xs) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.article-literature__column {
+  @include media(sm) {
+    width: 100%;
+  }
+  @include media(xs) {
+    width: 100%;
+  }
+}
+
+.article-literature__item p{
+  @include media(sm) {
+    font-size: vie(14, sm);
+  }
+  @include media(xs) {
+    font-size: vie(14, xs);
+  }
+}

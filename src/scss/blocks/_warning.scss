@@ -1,0 +1,42 @@
+.b-warning {
+  padding-top: vie(35, xl);
+  padding-bottom: vie(19, xl);
+
+  &__text {
+    width: 100%;
+    font-family: "Arial Regular", sans-serif;
+    white-space: pre-wrap;
+    color: #e0e0e0;
+    font-size: vie(59, xl);
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: vie(64, xl);
+  }
+
+  &__descr {
+    font-size: vie(15, xl);
+    color:  #727272;
+
+    @include media(sm) {
+      font-size: vie(10, sm);
+    }
+
+    @include media(xs) {
+      font-size: vie(10, xs);
+    }
+  }
+
+  &__wrap {
+    width: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.privacy-policy {
+  text-decoration: underline;
+}

@@ -1,0 +1,144 @@
+.article-note-bl {
+  background-image: url('../img/bg-5.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .authors  {
+    padding-top: vie(15, xl);
+    margin-bottom: vie(10, xl);
+    border-top: vie(2, xl) solid #5795cc;
+  }
+
+  .author {
+    color: #ffffff;
+    font-size: vie(16, xl);
+    margin-bottom: vie(14, xl);
+    display: block;
+  }
+
+  .num {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: vie(12, xl);
+    display: block;
+  }
+
+  .article-note__column {
+    margin-right: 0;
+  }
+
+  .article-note__column {
+    &:last-child {
+      margin-left: vie(20, xl);
+      width: 45%;
+    }
+  }
+
+  .container {
+    border-bottom: 0;
+    padding-bottom: vie(40, xl);
+  }
+
+  .article-note__descr {
+    color: #ffffff;
+    font-size: vie(20, xl);
+    margin-bottom: vie(14, xl);
+    max-width: vie(578, xl);
+  }
+
+}
+
+.article-also__title {
+  max-width: vie(400, xl);
+}
+
+.article-note-bl .container {
+  @include media(sm) {
+    display: flex;
+    flex-direction: column;
+    padding: vie(30, sm) 0;
+  }
+  @include media(xs) {
+    display: flex;
+    flex-direction: column;
+    padding: vie(30, sm) 0;
+  }
+
+  .article-note__column {
+    @include media(sm) {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: vie(8, sm);
+    }
+    @include media(xs) {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: vie(8, xs);
+    }
+  }
+
+  .article-note__descr {
+    @include media(sm) {
+      width: 100%;
+      max-width: 100%;
+      font-size: vie(14, sm);
+      margin-bottom: vie(8, sm);
+    }
+    @include media(xs) {
+      width: 100%;
+      max-width: 100%;
+      font-size: vie(14, xs);
+      margin-bottom: vie(8, xs);
+    }
+  }
+
+    .article-note-bl .authors {
+      @include media(sm) {
+        margin-top: vie(20, sm);
+      }
+      @include media(xs) {
+        margin-top: vie(20, xs);
+      }
+    }
+
+  .authors {
+    @include media(sm) {
+      margin-top: vie(30, sm);
+      padding-top: vie(16, sm);
+    }
+    @include media(xs) {
+      margin-top: vie(30, xs);
+      padding-top: vie(16, xs);
+    }
+  }
+
+    .author {
+      @include media(sm) {
+        font-size: vie(14, sm);
+      }
+      @include media(xs) {
+        font-size: vie(14, xs);
+      }
+    }
+
+    .num {
+      @include media(sm) {
+        font-size: vie(11, sm);
+      }
+      @include media(xs) {
+        font-size: vie(11, xs);
+      }
+
+      span {
+        @include media(sm) {
+          display: block;
+          margin-top: vie(8, sm);
+        }
+        @include media(xs) {
+          display: block;
+          margin-top: vie(8, xs);
+        }
+      }
+    }
+}

@@ -1,0 +1,60 @@
+.b-button {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background: none;
+  padding-top: vie(8, xl);
+  padding-bottom: vie(8, xl);
+  padding-left: vie(14, xl);
+  padding-right: vie(14, xl);
+  border: 1px solid #c1f3ff;
+  border-radius: 5px;
+  opacity: 1;
+  cursor: pointer;
+
+  &__content {
+    font-size: vie(15, xl);
+    font-family: $gl;
+    color: #c1f3ff;
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.b-button__bigger {
+  padding-top: vie(16, xl);
+  padding-bottom: vie(16, xl);
+  padding-left: vie(85, xl);
+  padding-right: vie(85, xl);
+  background-color: $blueBolder;
+  box-shadow: 5px 6px 1px rgba(0, 0, 0, 0.11);
+  opacity: 1;
+  border-radius: 8px;
+  cursor: pointer;
+  @include trs();
+  &-content {
+    font-size: vie(28, xl);
+    color: #fff;
+
+    @include media(sm) {
+      font-size: vie(28, xs);
+    }
+  }
+
+
+  @include media(sm) {
+    padding-top: vie(25, xl);
+    padding-bottom: vie(25, xl);
+    margin-top: vie(170, sm);
+    width: 100%;
+    box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.17);
+  }
+  @include media(xs) {
+    margin-top: vie(170, xs);
+    width: 100%;
+    box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.17);
+  }
+}
+

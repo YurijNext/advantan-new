@@ -1,0 +1,227 @@
+// Псевдоэлементы
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// TRS
+@mixin trs($name: all, $duration: .3s, $func: ease-in-out) {
+  transition: $name $duration $func;
+}
+
+// Отступы
+@mixin mx--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+
+// Треугольники
+@mixin triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
+  @include pseudo($pos: $position);
+  width: 0;
+  height: 0;
+  @if $round {
+    border-radius: 3px;
+  }
+  @if $direction == down {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+    margin-top: 0 - round( $size / 2.5 );
+  } @else if $direction == up {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+    margin-bottom: 0 - round( $size / 2.5 );
+  } @else if $direction == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+    margin-right: -$size;
+  } @else if $direction == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+    margin-left: -$size;
+  }
+}
+
+// Media
+@mixin media($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin mb($size) {
+  margin-bottom: #{$size}px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin mt($size) {
+  margin-top: #{$size}px;
+  &:last-child {
+    margin-top: 0;
+  }
+}
+
+@mixin ml($size) {
+  margin-left: #{$size}px;
+  &:last-child {
+    margin-left: 0;
+  }
+}
+
+@mixin mr($size) {
+  margin-right: #{$size}px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// Aligne
+@mixin align($position: absolute, $vertical: false, $horizontal: false) {
+  @if $position {
+    position: $position;
+  }
+  @if $vertical {
+    top: 50%;
+  }
+  @if $horizontal {
+    left: 50%;
+  }
+
+  @if $vertical and $horizontal {
+    transform: translateX(-50%) translateY(-50%);
+  } @else if $vertical {
+    transform: translateY(-50%);
+  } @else if $horizontal {
+    transform: translateX(-50%);
+  }
+}
+
+//Block Size
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+//Border
+@mixin border($size, $color) {
+  border: #{$size}px solid $color;
+}
+
+//Font
+/** Function Rem **/
+@function rem($pxsize) {
+  @return ($pxsize/16)+rem;
+}
+
+@function em($pxsize) {
+  @return ($pxsize/16)+em;
+}
+
+
+@mixin font($pxsize, $weight: false, $uppercase: false) {
+  font-size: rem($pxsize);
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @if ($uppercase) {
+    text-transform: uppercase;
+  }
+}
+
+
+
+//Overlay
+@mixin overlay($pos) {
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: $pos;
+  right: 0;
+  top: 0;
+}
+
+//FlexCenter
+@mixin flex($y: false, $x: false, $wrap: false) {
+  display: flex;
+  @if ($x) {
+    justify-content: $x;
+  }
+  @if ($y) {
+    align-items: $y;
+  }
+  @if ($wrap) {
+    flex-wrap: wrap;
+  }
+}
+
+/** EXTENDS **/
+
+%circle {
+  border-radius: 50%;
+}
+
+//Viewport
+
+@function vw($pxsize, $viewport) {
+  @return $pxsize/($viewport/100)+vw;
+}
+
+@function vie($pxsize, $media) {
+  @if $media == xxl {
+    $media: $xxl;
+  }
+  @else if $media == xl {
+    $media: $xl;
+  }
+  @else if $media == lg {
+    $media: $lg;
+  }
+  @else if $media == md {
+    $media: $md;
+  }
+  @else if $media == sm {
+    $media: $sm;
+  }
+  @else if $media == xs {
+    $media: $xs;
+  }
+  @else if $media == ss {
+    $media: $ss;
+  }
+  @else if $media == f_xl {
+    $media: $f_xl;
+  }
+  @else if $media == f_lg {
+    $media: $f_lg;
+  }
+  @else if $media == f_md {
+    $media: $f_md;
+  }
+  @else if $media == f_sm {
+    $media: $f_sm;
+  }
+  @else if $media == f_xs {
+    $media: $f_xs;
+  }
+  @else if $media == f_ss {
+    $media: $f_ss;
+  }
+  @return $pxsize/($media/100)+vw;
+}

@@ -1,0 +1,276 @@
+.b-videos {
+  background-color: #01152d;
+  background-image: url("../img/shadow.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: vie(40, xl);
+  padding-bottom: vie(40, xl);
+
+  @include media(sm) {
+    background-image: none;
+    padding-top: vie(21, sm);
+    padding-bottom: vie(42, sm);
+  }
+
+  @include media(xs) {
+    background-image: none;
+    padding-top: vie(21, xs);
+    padding-bottom: vie(42, xs);
+  }
+
+  &__title {
+    text-align: center;
+    font-size: vie(34, xl);
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: vie(40, xl);
+
+    @include media(sm) {
+      font-size: vie(22, sm);
+      margin-bottom: vie(24, sm);
+    }
+
+    @include media(xs) {
+      font-size: vie(22, xs);
+      margin-bottom: vie(24, xs);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include media(sm) {
+      flex-direction: column;
+    }
+
+    @include media(xs) {
+      flex-direction: column;
+    }
+  }
+
+  &__video-wrap {
+    min-width: vie(620, xl);
+    width: vie(620, xl);
+    margin-right: vie(20, xl);
+
+    @include media(sm) {
+      width: 100%;
+      min-width: 1vw;
+      margin-right: 0;
+      margin-bottom: vie(24, sm);
+    }
+
+    @include media(xs) {
+      width: 100%;
+      min-width: 1vw;
+      margin-right: 0;
+      margin-bottom: vie(24, xs);
+    }
+
+  }
+
+  &__group {
+    min-width: vie(520, xl);
+    width: vie(520, xl);
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    @include media(sm) {
+      flex-direction: column;
+      width: 100%;
+      min-width: 1vw;
+    }
+
+    @include media(xs) {
+      flex-direction: column;
+      width: 100%;
+      min-width: 1vw;
+    }
+  }
+
+  &__poster {
+    opacity: 1;
+    cursor: pointer;
+    @include trs();
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+  }
+
+  &__poster-wrap {
+    width: 47%;
+
+    @include media(sm) {
+      width: 100%;
+      margin-bottom: 100px;
+      min-height: 230px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 30px;
+    }
+
+
+
+    @include media(xs) {
+      width: 100%;
+      margin-bottom: 30px;
+      min-height: 230px;
+    }
+  }
+
+  &__poster--min {
+
+    height: vie(200, xl);
+    margin-right: vie(15, xl);
+
+    @include media(sm) {
+      width: 100%;
+      height: vie(176, sm);
+    }
+
+    @include media(xs) {
+      width: 100%;
+      height: vie(176, xs);
+    }
+  }
+
+
+
+  &__descr--min{
+    font-size: vie(16, xl);
+    color: #fff;
+    margin-top: vie(8, xl);
+    display: block;
+
+    @include media(sm) {
+      font-size: vie(19, sm);
+      line-height: vie(22, sm);
+    }
+
+    @include media(xs) {
+      font-size: vie(19, xs);
+      line-height: vie(22, xs);
+    }
+  }
+
+  &__poster-img {
+    object-fit: contain;
+  }
+
+  &__descr--big {
+    font-size: vie(25, xl);
+    color: #fff;
+    font-weight: 300;
+    margin-top: vie(15, xl);
+    max-width: 442px;
+    display: block;
+    @include media(sm) {
+      font-size: vie(19, sm);
+      line-height: vie(22, sm);
+    }
+
+    @include media(xs) {
+      font-size: vie(19, xs);
+      line-height: vie(22, xs);
+    }
+  }
+
+  &__poster-img-wrap {
+    position: relative;
+  }
+
+  &__poster-number {
+    font-family: $gb;
+    font-size: vie(26, xl);
+    color: #fff;
+    position: absolute;
+    top: vie(24, xl);
+    left: vie(24, xl);
+
+    &--min {
+      font-size: vie(15, xl);
+      left: vie(10, xl);
+      top: vie(12, xl);
+
+      @include media(sm) {
+        font-size: vie(18, sm);
+        top: vie(16, sm);
+        left: vie(12, sm);
+      }
+
+      @include media(xs) {
+        font-size: vie(18, xs);
+        top: vie(16, xs);
+        left: vie(12, xs);
+      }
+    }
+
+    @include media(sm) {
+      font-size: vie(18, sm);
+      top: vie(16, sm);
+      left: vie(12, sm);
+    }
+
+    @include media(xs) {
+      font-size: vie(18, xs);
+      top: vie(16, xs);
+      left: vie(12, xs);
+    }
+  }
+
+  &__play-icon {
+    display: block;
+    position: absolute;
+    bottom: vie(45, xl);
+    left: vie(27, xl);
+
+    &--big {
+      width: vie(48, xl);
+      @include media(sm) {
+        width: vie(35, sm);
+        bottom: vie(20, sm);
+        left: vie(14, sm);
+      }
+      @include media(xs) {
+        width: vie(35, xs);
+        bottom: vie(20, xs);
+        left: vie(14, xs);
+      }
+    }
+
+    &--min {
+      width: vie(28, xl);
+      bottom: vie(16, xl);
+      left: vie(12, xl);
+
+      @include media(xs) {
+        width: vie(35, xs);
+        bottom: vie(20, xs);
+        left: vie(14, xs);
+      }
+
+      @include media(sm) {
+        width: vie(35, sm);
+        bottom: vie(20, sm);
+        left: vie(14, sm);
+      }
+    }
+  }
+
+  &__button {
+    margin-top: vie(12, xl);
+    @include trs();
+
+    @include media(sm) {
+      display: none;
+    }
+
+    @include media(xs) {
+      display: none;
+    }
+  }
+}

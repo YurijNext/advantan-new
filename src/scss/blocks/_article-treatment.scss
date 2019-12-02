@@ -1,0 +1,157 @@
+.article-treatment {
+  padding-top: vie(40, xl);
+  padding-bottom: vie(58, xl);
+}
+
+.article-treatment__title-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: vie(10, xl);
+
+  img {
+    margin-right: vie(24, xl);
+  }
+}
+
+.article-treatment__title {
+  color: #1b62a7;
+  font-size: vie(32, xl);
+  font-family: $gsb;
+}
+
+.article-treatment {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+    width: 50%;
+  }
+
+  &__column-left {
+    margin-right: vie(80, xl);
+    .article-treatment__descr {
+      max-widht: vie(574, xl);
+    }
+  }
+
+  &__column-right {
+    .article-treatment__descr {
+      max-widht: vie(527, xl);
+    }
+  }
+
+  &__descr {
+    font-size: vie(20, xl);
+    color: #303030;
+    font-family: $mainFont;
+    max-width: 527px;
+  }
+
+  &__list {
+    padding-top: vie(20, xl);
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: vie(18, xl);
+
+    img {
+      margin-right: 9px;
+      margin-top: vie(5, xl);
+    }
+  }
+
+  &__item-text {
+    color: #1b62a7;
+    font-size: vie(20, xl);
+    font-family: $gsb;
+  }
+
+}
+
+.article-treatment__row {
+  @include media(sm) {
+    display: flex;
+    flex-direction: column;
+  }
+  @include media(xs) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.article-treatment__column {
+  @include media(sm) {
+    width: 100%;
+  }
+  @include media(xs) {
+    width: 100%;
+  }
+}
+
+.article-treatment__descr {
+  @include media(sm) {
+    font-size: vie(14, sm);
+  }
+  @include media(xs) {
+    font-size: vie(14, xs);
+  }
+}
+
+.article-treatment__item-text {
+  @include media(sm) {
+    font-size: vie(16, sm);
+  }
+  @include media(xs) {
+    font-size: vie(16, xs);
+  }
+}
+
+.article-treatment__list {
+  @include media(sm) {
+    margin: vie(32, sm) 0;
+  }
+  @include media(xs) {
+    margin: vie(32, xs) 0;
+  }
+}
+
+.article-treatment__title-wrap {
+  @include media(sm) {
+    margin-bottom: vie(15, sm);
+  }
+  @include media(xs) {
+    margin-bottom: vie(15, xs);
+  }
+}
+
+.article-treatment__text-list {
+  @include media(sm) {
+    margin-top: vie(10, sm);
+  }
+  @include media(xs) {
+    margin-top: vie(10, xs);
+  }
+}
+
+.article-treatment__text-item {
+  @include media(sm) {
+    font-size: vie(14, sm);
+  }
+  @include media(xs) {
+    font-size: vie(14, xs);
+  }
+}
+
+.article-treatment {
+  @include media(sm) {
+    padding-bottom: vie(30, sm);
+  }
+  @include media(xs) {
+    padding-bottom: vie(30, xs);
+  }
+}
+

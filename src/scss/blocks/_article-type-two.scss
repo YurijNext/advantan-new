@@ -1,0 +1,34 @@
+.article-type-two .container{
+  padding-top: vie(38, xl);
+  padding-bottom: vie(70, xl);
+  border-bottom: vie(6, xl) solid #94d6dc;
+}
+
+.type-two-descr {
+  max-width: vie(960, xl);
+  color: #303030;
+  font-size: vie(20, xl);
+  font-family: $mainFont;
+}
+
+.type-two-descr {
+  @include media(sm) {
+    font-size: vie(14, sm);
+    max-width: 100%;
+  }
+  @include media(xs) {
+    font-size: vie(14, xs);
+    max-width: 100%;
+  }
+}
+
+.article-type-two .container {
+  @include media(sm) {
+    margin: vie(30, sm);
+    padding-bottom: vie(50, sm);
+  }
+  @include media(xs) {
+    margin: vie(30, sm);
+    padding-bottom: vie(50, sm);
+  }
+}

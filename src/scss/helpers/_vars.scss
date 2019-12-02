@@ -1,0 +1,41 @@
+$breakpoints: (
+  "xsm": 321px,
+  "xs": 361px,
+  "sm": 577px,
+  "md": 769px,
+  "lg": 1025px,
+  "xl": 1160px,
+  "xxl": 1400px
+);
+
+
+$xl: 1400;
+$sm: 577;
+$xs: 360;
+
+
+
+$z-indexes: (
+  'modal': 3,
+  'dropdown': 2,
+  'default': 1,
+  'below': -1,
+);
+
+// Colors
+$accent: #1e5ca4;
+$blueBolder: #055eaa;
+$blueLight: #5fa2db;
+
+
+$mainFont: 'Gilroy Regular', sans-serif;
+$gl: 'Gilroy Regular', sans-serif;
+$gb: 'Gilroy Bold', sans-serif;
+$gm: 'Gilroy Medium', sans-serif;
+$geb: 'Gilroy ExtraBold', sans-serif;
+$gsb: 'Gilroy SemiBold', sans-serif;
+$arial: 'Arial MT', sans-serif;
+$semi: 600
+
+
+

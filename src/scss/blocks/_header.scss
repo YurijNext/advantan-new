@@ -1,0 +1,205 @@
+.b-header .container {
+  height: 100%;
+}
+
+.b-header {
+  position: relative;
+  background: linear-gradient(to right, #1e5da4 0%,#009cca 50%);
+  height: vie(70, xl);
+  @include media(xs) {
+    height: vie(55, xs);
+  }
+  @include media(sm) {
+    height: vie(55, sm);
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+  }
+
+  &__logo {
+    width: vie(190, xl);
+    margin-right: vie(176, xl);
+    @include media(xs) {
+      width: vie(162, xs);
+      margin-right: 0;
+    }
+
+    @include media(sm) {
+      width: vie(162, sm);
+      margin-right: 0;
+    }
+  }
+
+  &__nav {
+    height: 100%;
+    @include media(xs) {
+      display: none;
+    }
+    @include media(sm) {
+      display: none;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    height: 100%;
+  }
+
+  &__nav-item {
+    margin-right: vie(40, xl);
+    height: 100%;
+  }
+
+  &__nav-link {
+    font-family: $gm;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: vie(22, xl);
+    border-bottom: vie(5, xl) solid transparent;
+    @include trs();
+
+    &--active {
+      border-bottom: vie(5, xl) solid #53d4f2;
+    }
+
+    &:hover {
+      border-bottom: vie(5, xl) solid #53d4f2;
+    }
+
+    @include media(xs) {
+      &--active {
+        border-bottom: none;
+      }
+    }
+
+    @include media(sm) {
+      &--active {
+        border-bottom: none;
+      }
+    }
+  }
+  
+  &__socials {
+    height: 100%;
+    margin-left: auto;
+    position: relative;
+    z-index: 3;
+    @include media(xs) {
+      display: none;
+    }
+    @include media(sm) {
+      display: none;
+    }
+  }
+
+  &__socials-list {
+    height: 100%;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__socials-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: vie(25, xl);
+  }
+
+  &__socilas-link {
+    display: flex;
+  }
+
+  &__socilas-svg {
+    width: vie(25, xl);
+  }
+
+  &__right-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: vie(300, xl);
+    background-color: #1e5ca4;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+    z-index: 1;
+
+    @include media(xs) {
+      display: none;
+    }
+    @include media(sm) {
+      display: none;
+    }
+  }
+
+  &__humburger {
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    @include media(xs, min) {
+      display: none;
+    }
+
+    @include media(xs) {
+      display: block;
+      position: absolute;
+      right: 0;
+      height: 100%;
+
+    }
+
+    @include media(sm) {
+      display: block;
+      position: absolute;
+      right: 0;
+      height: 100%;
+
+    }
+  }
+
+  &__humburger-box {
+    width: vie(22, xs);
+    height: vie(12, xs);
+    margin-top: 4px;
+  }
+
+  &__humburger-inner {
+    background-color: #fff;
+    width: vie(22, xs);
+    height: vie(2, xs);
+    &:after, &:before {
+      background-color: #fff;
+      width: vie(22, xs);
+      height: vie(2, xs);
+    }
+
+    &:before {
+      top: -5px;
+    }
+
+    &:after {
+      bottom: -5px;
+    }
+  }
+}
+
+.header-hamburger--active {
+  background-color: #1857a0;
+}
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before {
+  background-color: #fff;
+  opacity: 1;
+}
+
+.hamburger.is-active:hover, .hamburger:hover {
+  opacity: 1;
+}

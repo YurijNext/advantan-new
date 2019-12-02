@@ -1,0 +1,39 @@
+.test-popup#test
+    .overlay
+    .test-popup__wrap
+        button(type="button").test-popup__close.popup-close Закрыть
+        header.test-popup__header
+            ul.test-popup__dots.js-dots-list
+
+            .question-container
+                .test-popup__qustion.js-q-wrap
+
+        .test-popup__content
+            .test-popup__image-wrap.js-cnt-wrap
+
+
+            .test-popup__buttons
+                button(type="button" data-status="false").test-popup__button.js-ans-btn
+                    span.test-popup__button-content Ложь
+                button(type="button" data-status="true").test-popup__button.js-ans-btn
+                    span.test-popup__button-content Правда
+
+            .test-popup__btn-wrap
+                button(type="button").test-popup__reply
+                    span.test-popup__reply-content Ответить
+                button(type="button").test-popup__continue
+                    span.test-popup__reply-content Дальше
+
+            .test-socials
+                span Поделиться с друзьями
+
+                ul.test-socials-list
+                    li.test-socials-item
+                        a(href="#" id="share-fb").test-socials-link
+                            img(src="img/test/insta.png" alt="Icon")
+                    li.test-socials-item
+                        a(href="#" id="share-vk").test-socials-link
+                            img(src="img/test/vk.png" alt="Icon")
+
+
+
